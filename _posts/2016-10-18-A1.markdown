@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      A1 - Installing & Importing Modules
+title:      A1 - Modules
 author:     Andrew Swafford
 tags: 		python tutorial
-subtitle:  	Some Short Description of Post
+subtitle:  	Installing & Importing Modules
 category:  pythonTuts
 ---
 # SECTION A1 - Installing & Importing Modules
