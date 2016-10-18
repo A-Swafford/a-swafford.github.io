@@ -40,11 +40,11 @@ You should see a list of very helpful commands pop up. Python 3 relies on easy_i
 
 **WINDOWS**
 1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:  
-  * *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
-  * *Mktemp* - be sure to add the bin directory to your PATH.  
-  * *Notepad++*  
-  * *Cython*  
-  * *Git*
+  - *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
+  - *Mktemp* - be sure to add the bin directory to your PATH.  
+  - *Notepad++*  
+  - *Cython*  
+  - *Git*
 
 2. In order to use pip and easy_install from any directory, you must add the Scripts directory to your PATH. If you do not know how to add to your PATH, consider google!  The directory you need to add is the Scripts folder in your Python home directory that you defined on install.  
 Assuming you installed Python 2.7 directly on your C:\ drive, you would want to add two new entries to your PATH:
