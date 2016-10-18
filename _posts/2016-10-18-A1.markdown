@@ -11,12 +11,12 @@ category:  pythonTuts
 ## Installing Modules
 
 Installing modules is something you will inevitably need to do as you begin to seriously use python.  Similar to 'packages' in R, python modules are (some more than others) curated sets of functions & classes that are available for public use.  Installation on Unix systems is typically more simple - but there are almost always workarounds when using Windows.  For the coming tutorials, you will be using several packages that are not native (included in the default install) to python.  Here is a list of the modules we will be using:
-* Numpy
-* ETE3
-* Six
-* BioPython
-* Uniprot
-* Virtual environment
+* Numpy  
+* ETE3  
+* Six  
+* BioPython  
+* Uniprot  
+* Virtual environment  
 
 To use the modules, they must first be installed.
 
@@ -40,11 +40,11 @@ You should see a list of very helpful commands pop up. Python 3 relies on easy_i
 
 **WINDOWS**
 1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:  
-  * *MinGW* How to install, be sure to install the 'basic' and 'gcc' packages.  
-  * *Mktemp* be sure to add the bin directory to your PATH.  
+  * *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
+  * *Mktemp* - be sure to add the bin directory to your PATH.  
   * *Notepad++*  
   * *Cython*  
-  * *Git
+  * *Git*
 
 2. In order to use pip and easy_install from any directory, you must add the Scripts directory to your PATH. If you do not know how to add to your PATH, consider google!  The directory you need to add is the Scripts folder in your Python home directory that you defined on install.  
 Assuming you installed Python 2.7 directly on your C:\ drive, you would want to add two new entries to your PATH:
@@ -81,12 +81,12 @@ Andrew@Swafford.com
 Importing modules is the next step after installing.  While basic usage is easy, there are several conventions that you may choose to follow.  Each module is, in effect, a library filled with functions and classes that serve as our analogies to 'books'.  By typing 'import numpy' you are essentially setting up a reference to all books in the library, but are not directly attaching them to your python session, this leads to messy and un-pythonic code, and is typically discouraged.  The 'crude' but effective method to bypass this is to simply ask to 'check out' the entire library by executing 'from numpy import *'.  This command imports every function and class in the numpy library and, while effective, is viewed as creating unnecessary CPU and memory usage.  
   
 A good import will specifically choose the classes and functions that will be used and nothing more.  For instance, in the module ETE3, there are a number of very weighty classes & functions.  To avoid importing these each time you call the script, and because we will normally only be interested in importing and reading trees, we read the documentation to find out what classes/functions we need.  In this case, we will need the 'Treenode' or 'Tree' class.  To selectively import only this class and its functions into memory, we use the command:  
-```python
+``` python
 from ete3 import Tree.
 ```
 
 If we are interested in importing multiple classes/functions from a particular module, we can list them separated by commas:  
-```python
+``` python
 from ete3 import Tree, PhyloTree
 ```
 
@@ -113,13 +113,13 @@ You have already installed the virtual environment package earlier in this tutor
 **UNIX:** `virtualenv sandbox`  
 **WINDOWS:** `virtualenv.exe sandbox`  
 These create the virtual environment named '*sandbox*' in the directory you are currently in.  Once created, you will need to activate this virtual environment by executing:  
-**UNIX:** 'source sandbox/bin/activate'  
-**WINDOWS:** 'source sandbox/Scripts/activate'  
+**UNIX:** `source sandbox/bin/activate`  
+**WINDOWS:** `source sandbox/Scripts/activate`  
 In response to this command, you will get a printout of `(sandbox)` after a minute or so indicating that the virtual environment is now active.
 
 With the virtual environment now active, you effectively have a clean install of your python version.  To make sure, invoke python and attempt to import the module `ete3`, which we know was correctly installed on our core version.  Doing so should throw an error saying `No module named ete3 installed`, success!  When you are done with the environment, you can return to your core python installation by simply typing `deactivate`.  If you would like to use the same environment again, navigate to the directory containing your virtual environment's folder in your command line interface and use:  
-**UNIX:** 'source sandbox/bin/activate'  
-**WINDOWS:** 'source sandbox/Scripts/activate'  
+**UNIX:** `source sandbox/bin/activate`  
+**WINDOWS:** `source sandbox/Scripts/activate`  
 
 ### Troubleshooting
 Let me know if you have a problem so I can add it here!  
