@@ -11,12 +11,12 @@ category:  pythonTuts
 ## Installing Modules
 
 Installing modules is something you will inevitably need to do as you begin to seriously use python.  Similar to 'packages' in R, python modules are (some more than others) curated sets of functions & classes that are available for public use.  Installation on Unix systems is typically more simple - but there are almost always workarounds when using Windows.  For the coming tutorials, you will be using several packages that are not native (included in the default install) to python.  Here is a list of the modules we will be using:  
-* Numpy  
-* ETE3  
-* Six  
-* BioPython  
-* Uniprot  
-* Virtual environment  
+* Numpy
+* ETE3
+* Six
+* BioPython
+* Uniprot
+* Virtual environment
 
 To use the modules, they must first be installed.
 
@@ -38,12 +38,12 @@ You should see a list of very helpful commands pop up. Python 3 relies on easy_i
 5. Now install the rest of the modules using the following names: 'biopython', 'uniprot', 'ete3', 'virtualenv', and 'six'.
 
 
-**WINDOWS**
+**WINDOWS**  
 1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:
-* *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
-* *Mktemp* - be sure to add the bin directory to your PATH.  
-* *Notepad++*  
-* *Cython*  
+* *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.
+* *Mktemp* - be sure to add the bin directory to your PATH.
+* *Notepad++*
+* *Cython*
 * *Git*
 
 2. In order to use pip and easy_install from any directory, you must add the Scripts directory to your PATH. If you do not know how to add to your PATH, consider google!  The directory you need to add is the Scripts folder in your Python home directory that you defined on install.  
