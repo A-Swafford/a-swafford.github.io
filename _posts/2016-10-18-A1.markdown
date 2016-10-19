@@ -11,7 +11,7 @@ category:  pythonTuts
 ## Installing Modules
 
 Installing modules is something you will inevitably need to do as you begin to seriously use python.  Similar to 'packages' in R, python modules are (some more than others) curated sets of functions & classes that are available for public use.  Installation on Unix systems is typically more simple - but there are almost always workarounds when using Windows.  For the coming tutorials, you will be using several packages that are not native (included in the default install) to python.  Here is a list of the modules we will be using:  
-* Numpy  
+
 * ETE3  
 * Six
 * BioPython
