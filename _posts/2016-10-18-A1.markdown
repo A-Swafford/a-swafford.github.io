@@ -81,14 +81,14 @@ Andrew@Swafford.com
 Importing modules is the next step after installing.  While basic usage is easy, there are several conventions that you may choose to follow.  Each module is, in effect, a library filled with functions and classes that serve as our analogies to 'books'.  By typing 'import numpy' you are essentially setting up a reference to all books in the library, but are not directly attaching them to your python session, this leads to messy and un-pythonic code, and is typically discouraged.  The 'crude' but effective method to bypass this is to simply ask to 'check out' the entire library by executing 'from numpy import *'.  This command imports every function and class in the numpy library and, while effective, is viewed as creating unnecessary CPU and memory usage.  
   
 A good import will specifically choose the classes and functions that will be used and nothing more.  For instance, in the module ETE3, there are a number of very weighty classes & functions.  To avoid importing these each time you call the script, and because we will normally only be interested in importing and reading trees, we read the documentation to find out what classes/functions we need.  In this case, we will need the 'Treenode' or 'Tree' class.  To selectively import only this class and its functions into memory, we use the command:  
-```python
+~~~python
 from ete3 import Tree.
-```
+~~~
 
 If we are interested in importing multiple classes/functions from a particular module, we can list them separated by commas:  
-```python
+~~~python
 from ete3 import Tree, PhyloTree
-```
+~~~
 
 If you are writing a script (and there is no reason you should not be), all imports are called before any actual code.  The only things that come before import commands would be short comments or a shebang directing the operating system to use the python environment.
 
