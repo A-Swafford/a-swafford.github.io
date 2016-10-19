@@ -6,13 +6,14 @@ tags: 		python tutorial
 subtitle:  	Installing & Importing Modules
 category:  pythonTuts
 ---
-# SECTION A1 - Installing & Importing Modules
+# Installing & Importing Modules
 
 ## Installing Modules
 
 Installing modules is something you will inevitably need to do as you begin to seriously use python.  Similar to 'packages' in R, python modules are (some more than others) curated sets of functions & classes that are available for public use.  Installation on Unix systems is typically more simple - but there are almost always workarounds when using Windows.  For the coming tutorials, you will be using several packages that are not native (included in the default install) to python.  Here is a list of the modules we will be using:  
 
-* ETE3  
+* Numpy  
+* ETE3
 * Six
 * BioPython
 * Uniprot
@@ -39,12 +40,13 @@ You should see a list of very helpful commands pop up. Python 3 relies on easy_i
 
 
 **WINDOWS**  
-1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:
-* *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.
-* *Mktemp* - be sure to add the bin directory to your PATH.
-* *Notepad++*
-* *Cython*
-* *Git*
+1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:  
+
+* *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
+* *Mktemp* - be sure to add the bin directory to your PATH.  
+* *Notepad++*  
+* *Cython*  
+* *Git*  
 
 2. In order to use pip and easy_install from any directory, you must add the Scripts directory to your PATH. If you do not know how to add to your PATH, consider google!  The directory you need to add is the Scripts folder in your Python home directory that you defined on install.  
 Assuming you installed Python 2.7 directly on your C:\ drive, you would want to add two new entries to your PATH:
@@ -83,7 +85,7 @@ Importing modules is the next step after installing.  While basic usage is easy,
 A good import will specifically choose the classes and functions that will be used and nothing more.  For instance, in the module ETE3, there are a number of very weighty classes & functions.  To avoid importing these each time you call the script, and because we will normally only be interested in importing and reading trees, we read the documentation to find out what classes/functions we need.  In this case, we will need the 'Treenode' or 'Tree' class.  To selectively import only this class and its functions into memory, we use the command:  
 
 ```python
-from ete3 import Tree.
+from ete3 import Tree
 ```
 
 If we are interested in importing multiple classes/functions from a particular module, we can list them separated by commas:  
