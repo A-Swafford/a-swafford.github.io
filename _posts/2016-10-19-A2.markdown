@@ -43,7 +43,7 @@ Write a script that uses the random number generator in each module (random, num
 
 <details> 
   <summary>Hints</summary>  
-  (We'll talk about the last two more in the next lesson)
+  (We'll talk about the last two more in the next lesson)  
   
    * *Remember to import the modules with ‘import random’ and ‘import numpy’.*  
    * *Using ‘list.append(value)’ will put additional values into an existing list.*  
