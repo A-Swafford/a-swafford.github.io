@@ -27,7 +27,7 @@ rInt = nprand.randint(0,10)
 print(rInt)
 ```
 
-*Voila!* a random number between 0 and 10. **Wait, what is that you say? I'm wrong?!** Congratulations for reading the documentation. If you did not, shame! :bell: It turns out that `numpy.random.randint(x,y)` picks a random number between
+*Voila!* a random number between 0 and 10. **Wait, what is that you say? I'm wrong?!** Congratulations for reading the documentation. If you did not, shame! It turns out that `numpy.random.randint(x,y)` picks a random number between
 **x** and **y-1**.  Therefore, our script above actually only generates a random number between 0 and 9
 
 ## Random Sampling & Distributions
@@ -43,11 +43,12 @@ Write a script that uses the random number generator in each module (random, num
 
 <details> 
   <summary>Hints</summary>  
-  (We'll talk about the last two more in the next lesson)  
-  
-   * *Remember to import the modules with ‘import random’ and ‘import numpy’.*  
-   * *Using ‘list.append(value)’ will put additional values into an existing list.*  
-   * *While loops are your friends!*  
+  (We'll talk about the last two more in the next lesson)
+  <ul>
+   <li>*Remember to import the modules with ‘import random’ and ‘import numpy’.*
+   <li>*Using ‘list.append(value)’ will put additional values into an existing list.*
+   <li>*While loops are your friends!*
+  </ul>
 </details>  
 <details> 
   <summary>Answers</summary>  
@@ -77,7 +78,7 @@ Create a script that does the following:
 #### Exercise 3  
 Create a script that does the following from an initial list of integers from 0-9:
 1. Creates a list of 10,000 random draws, with replacement, from the initial list.
-2. Creates a list of 10 lists of 4 random draws, without replacement, from the initial list. :sparkles:  
+2. Creates a list of 10 lists of 4 random draws, without replacement, from the initial list.  
 
 <details> 
   <summary >Hints</summary>  
@@ -88,7 +89,4 @@ Create a script that does the following from an initial list of integers from 0-
   Not so fast!...actually there's just nothing here yet!  
 </details>
 <br/>
-<br/>  
-  
-  
-:bell:
+<br/> 
