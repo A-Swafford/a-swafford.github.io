@@ -6,6 +6,7 @@ tags: 		python tutorial
 subtitle:  	Generating Random Numbers and Distributions
 category:  pythonTuts
 ---
+{::options parse_block_html="true" /}
 # Random Number Generating & Distributions
 
 ## Random Number Generation
@@ -45,9 +46,9 @@ Write a script that uses the random number generator in each module (random, num
   <summary>Hints</summary>  
   (We'll talk about the last two more in the next lesson)
   <ul>
-   <li>*Remember to import the modules with ‘import random’ and ‘import numpy’.*
-   <li>*Using ‘list.append(value)’ will put additional values into an existing list.*
-   <li>*While loops are your friends!*
+   <li>Remember to import the modules with ‘import random’ and ‘import numpy’.
+   <li>Using ‘list.append(value)’ will put additional values into an existing list.
+   <li>While loops are your friends!
   </ul>
 </details>  
 <details> 
@@ -64,7 +65,7 @@ Create a script that does the following:
 2. Compares the probability of drawing the integer 10 from each distribution.
 3. Prints the probability of drawing a 10 from each distribution onto the screen.
 
-<details> 
+<details > 
   <summary>Hints</summary>  
    whoops, nothing here yet!
   </details>  
