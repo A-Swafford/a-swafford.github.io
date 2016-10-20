@@ -24,6 +24,7 @@ gems: [jekyll-paginate]
 markdown: kramdown
 kramdown: 
   parse_block_html: true
+  parse_inline_html: true
 highlighter: rouge
 permalink: pretty
 paginate: 10
