@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Test Post F5"
-subtitle: "So we actually test our code rather than praying that it'll work!"
+title: "Random Numbers & Sampling"
+subtitle: "Getting python to do your work for you."
 date: 2016-10-19 0:02:00
-author: "Shikher Verma"
+author: "Andrew Swafford"
 header-img: "/images/posts/pic04.jpg"
 comments: true
-tags: [ milestone, Software ]
+tags: [ Python, Tutorial ]
 ---
 
 ## Random Number Generation
@@ -23,6 +23,7 @@ We already have the ‘random’ module installed (native with python) and we pr
 * [Numpy module Random Documentation](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint)  
 
 Let's try out a bit of code that will generate a random number and print it to the screen:  
+
 ```python
 import numpy.random as nprand
 
@@ -63,7 +64,6 @@ Write a script that uses the random number generator in each module (random, num
 Create a script that does the following:
 
 1. Creates a list of 10 values drawn from each distribution:  
-
  * Normal with mean 5.
  * Uniform with min 0, max 10.
  * Gamma with shape 5 and scale 1.
