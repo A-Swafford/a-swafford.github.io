@@ -1,13 +1,17 @@
 ---
-layout:     post
-title:      A2 - Random Numbers & Distributions
-author:     Andrew Swafford
-tags: 		python tutorial
-subtitle:  	Generating Random Numbers and Distributions
-category:  pythonTuts
 ---
-
-# Random Number Generating & Distributions
+layout: post
+title:  "Random Numbers & Distributions"
+image: ''
+date:   2016-10-12 00:06:31
+tags:
+- PythonTutorials
+description: ''
+categories:
+- tutorials
+- python
+serie: learn
+---
 
 ## Random Number Generation
 
@@ -20,10 +24,9 @@ That said, generating random numbers in python is a simple process through a var
 We already have the ‘random’ module installed (native with python) and we previously installed the ‘numpy’ module.  Because you will undoubtedly have to learn to read the python doc sheets, this tutorial will just provide the links to the appropriate pages:
 
 * [Random module Documentation](https://docs.python.org/2/library/random.html)  
-* [Numpy module Random Documentation](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint)
-:bell:
-Let's try out a bit of code that will generate a random number and print it to the screen:  
+* [Numpy module Random Documentation](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint)  
 
+Let's try out a bit of code that will generate a random number and print it to the screen:  
 ```python
 import numpy.random as nprand
 
