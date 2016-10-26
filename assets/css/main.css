@@ -94,7 +94,7 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-family: sans-serif;
+    font-family: FontAwesome;
     vertical-align: baseline;
 }
 
@@ -2041,7 +2041,7 @@ textarea:invalid {
 .select-wrapper:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: sans-serif;
+    font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2105,7 +2105,7 @@ input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: sans-serif;
+    font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2245,7 +2245,7 @@ input[type="radio"]:focus + label:before {
 .icon:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: sans-serif;
+    font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
