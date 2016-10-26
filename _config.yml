@@ -1,8 +1,8 @@
 # Site settings
-title: AUV-IITK
+title: Terminal Node
 email: iitkauv@gmail.com
-copyright_name: AUV-IITK
-github_username: AUV-IITK
+copyright_name: TerminalNode
+github_username: A-Swafford
 
 collections:
   vehicles :
