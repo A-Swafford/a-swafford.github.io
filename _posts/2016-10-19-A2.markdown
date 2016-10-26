@@ -74,9 +74,7 @@ Create a script that does the following:
   </details>  
 <details> 
   <summary>Answers</summary>  
-  {% highlight python linenos %}
-  import face
-  {% endhighlight %}
+  {% gist A-Swafford/5aa9815ce4e2e0cdaaec4d1d74fb91eb %}
   Not so fast!...actually there's just nothing here yet!
 </details>
 <br/>
