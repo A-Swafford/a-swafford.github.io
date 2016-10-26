@@ -13,6 +13,8 @@ collections:
   people:
 
 # used to estimate reading time
+markdown: kramdown
+highlighter: rouge
 wpm: 150
 
 port: 4444
