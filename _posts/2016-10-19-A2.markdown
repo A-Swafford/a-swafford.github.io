@@ -23,12 +23,11 @@ We already have the ‘random’ module installed (native with python) and we pr
 
 Let's try out a bit of code that will generate a random number and print it to the screen:  
 
-```python
+{% highlight python linenos %}
 import numpy.random as nprand
 
 rInt = nprand.randint(0,10)
-print(rInt)
-```
+print(rInt) {% endhighlight %}
 
 *Voila!* a random number between 0 and 10. **Wait, what is that you say? I'm wrong?!** Congratulations for reading the documentation. If you did not, shame! It turns out that `numpy.random.randint(x,y)` picks a random number between
 **x** and **y-1**.  Therefore, our script above actually only generates a random number between 0 and 9\.  
@@ -62,7 +61,7 @@ Write a script that uses the random number generator in each module (random, num
 <br/>  
 
 #### Exercise 2
-CCreate a script that does the following:
+Create a script that does the following:
 
 1. Creates a list of 10 values drawn from each distribution:  
  * Normal with mean 5.
