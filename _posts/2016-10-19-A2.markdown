@@ -75,9 +75,9 @@ CCreate a script that does the following:
   </details>  
 <details> 
   <summary>Answers</summary>  
-```python
-import noodles
-```
+  {% highlight python linenos %}
+  import face
+  {% endhighlight %}
   Not so fast!...actually there's just nothing here yet!
 </details>
 <br/>
