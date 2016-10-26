@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 group :jekyll_plugins do
   gem "github-pages"
@@ -7,5 +7,6 @@ group :jekyll_plugins do
   gem "html-proofer"
   gem "rake"
   gem "jekyll-gist"
+  gem "wdm"
 
 end

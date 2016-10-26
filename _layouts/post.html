@@ -2,7 +2,7 @@
 layout: default
 ---
         <head>
-        <link rel="stylesheet" type="text/css" href="syntax.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
         </head>
         <!-- Header -->
         <header id="header">
@@ -28,8 +28,7 @@ layout: default
                 </span>
                 <div class="spotlight">
                     <div class="content">
-                        <link rel="stylesheet" href="syntax.css">
-                        <p>{{ content }}</p>
+                        <p>{{ content | markdownify }}</p>
                     </div>
                 </div>
             </section>
