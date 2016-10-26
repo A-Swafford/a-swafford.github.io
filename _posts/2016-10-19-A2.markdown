@@ -21,7 +21,7 @@ We already have the ‘random’ module installed (native with python) and we pr
 
 * [Random module Documentation](https://docs.python.org/2/library/random.html)  
 * [Numpy module Random Documentation](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randint.html#numpy.random.randint)
-
+:bell:
 Let's try out a bit of code that will generate a random number and print it to the screen:  
 
 ```python
