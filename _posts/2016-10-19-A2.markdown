@@ -1,18 +1,12 @@
 ---
----
 layout: post
-title:  "Random Numbers & Distributions"
-image: ''
-date:   2016-10-19 00:06:31
-tags:
-- PythonTutorials
-description: ''
+title: "Using Gazebo For Simulation"
+subtitle: "So we actually test our code rather than praying that it'll work!"
+date: 2016-06-28 0:02:00
+author: "Shikher Verma"
 header-img: "/images/posts/pic04.jpg"
 comments: true
-categories:
-- tutorials
-- python
-serie: learn
+tags: [ milestone, Software ]
 ---
 
 ## Random Number Generation
