@@ -32,15 +32,15 @@ print(rInt)
 
 *Voila!* a random number between 0 and 10. **Wait, what is that you say? I'm wrong?!** Congratulations for reading the documentation. If you did not, shame! It turns out that `numpy.random.randint(x,y)` picks a random number between
 **x** and **y-1**.  Therefore, our script above actually only generates a random number between 0 and 9\.  
-  
+</br>
 ## Random Sampling & Distributions
 Now that you have the basics of generating random numbers, let’s take a look at some of the really powerful functions that these random generators allow us to use.  We should all be familiar with the general shape of several basic types of distributions.  In case you are not, here are three you might commonly see mentioned: Uniform, Gamma, Normal.  These are only a small fraction of the distributions that are possible to sample from in numpy.  The scipy module expands on that list even further.  Learning to use these properly will allow you to create sets of random data in the shape of just about any distribution.  
 
 
 Now that you know how to draw random numbers from particular distributions, let’s turn our attention to one of the most common application of random number generators – creating a null distribution.  In many experiments, you will need to compare the number of times you recovered a particular result with the null hypothesis that all results are equally likely to be recovered.  To do this, you will need to create a null distribution of your data, which can be done using the ‘random.choice’ class in the ‘numpy’ module.  
+</br>
+## Exercises
 
-
-## Exercises  
 #### Exercise 1  
 Write a script that uses the random number generator in each module (random, numpy) that produces a list of 10,000 random integers between the numbers 2 and 999, inclusive.
 <details>
