@@ -62,7 +62,7 @@ Write a script that uses the random number generator in each module (random, num
 <br/>  
 
 #### Exercise 2
-Create a script that does the following:
+CCreate a script that does the following:
 
 1. Creates a list of 10 values drawn from each distribution:  
  * Normal with mean 5.
@@ -75,9 +75,9 @@ Create a script that does the following:
   </details>  
 <details> 
   <summary>Answers</summary>  
-  ```python
-  import noodles
-  ```
+```python
+import noodles
+```
   Not so fast!...actually there's just nothing here yet!
 </details>
 <br/>
