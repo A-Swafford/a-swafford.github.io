@@ -68,8 +68,7 @@ Create a script that does the following:
  * Uniform with min 0, max 10.
  * Gamma with shape 5 and scale 1.
 2. Compares the probability of drawing the integer 10 from each distribution.
-3. Prints the probability of drawing a 10 from each distribution onto the screen.
-
+3. Prints the probability of drawing a 10 from each distribution onto the screen.  
 <details> 
   <summary>Hints</summary>  
    whoops, nothing here yet!
