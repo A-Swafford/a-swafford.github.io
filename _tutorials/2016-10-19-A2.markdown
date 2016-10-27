@@ -4,8 +4,8 @@ title: "Random Numbers & Sampling"
 subtitle: "Getting python to do your work for you."
 date: 2016-10-19 0:02:00
 author: "Andrew Swafford"
+header-img: "/images/posts/pic04.jpg"
 comments: true
-category: Tutorials
 tags: [Python,Tutorial]
 ---
 
