@@ -6,7 +6,7 @@ date: 2016-10-19 0:02:00
 author: "Andrew Swafford"
 header-img: "/images/posts/pic04.jpg"
 comments: true
-tags: [ Python, Tutorial ]
+tags: [Python,Tutorial]
 ---
 
 ## Random Number Generation
