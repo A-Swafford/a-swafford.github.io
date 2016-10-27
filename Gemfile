@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "html-proofer"
   gem "rake"
   gem "jekyll-gist"
+  gem 'jemoji'
   gem "wdm"
 
 end
