@@ -10,9 +10,7 @@ description: Ipsum dolor sit amet nullam
         </header>
         <div id="main">
             <section id="content" class="main">
-                
                 {% for post in paginator.posts %}
-                    {% if post.tags contains 'Tutorial' %}
                         <div class="post-preview">
                             <a href="{{ post.url | prepend: site.baseurl }}">
                                 <h2 class="post-title">
@@ -27,7 +25,6 @@ description: Ipsum dolor sit amet nullam
                             <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
                         </div>
                         <hr>
-                    {% endif %}
                 {% endfor %}
 
                 <!-- Pager -->
