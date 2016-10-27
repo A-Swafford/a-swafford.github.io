@@ -1,75 +1,38 @@
 ---
-layout: default
+layout: page
 ---
-        <!-- Header -->
-        <header id="header" class="alt">
-            <span class="logo"><img src="images/logo.svg" alt="auv-iitk" /></span>
-            <span class="typedheader typed"></span> <!-- filled by main.js using typed.js -->
-        </header>
-        <div id="main">
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Who are we?</h2>
-                        </header>
-                        <p>Bio description here</p>
-                    </div>
-                    <span class="image"><img src="images/vehicles/varun.jpg" alt="varun" /></span>
-                </div>
-            </section>
-            <section id="subteams" class="main special">
-                <header class="major">
-                    <h2>Projects</h2>
-                </header>
-                <ul class="features">
-                    {% for item in site.subteam %}
-                    <li>
-                        <span class="icon major {{ item.iconstyle }} {{ item.icon }}"></span>
-                        <h3>{{ item.title }}</h3>
-                        <p>{{ item.description }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </section>
-            <section id="second" class="main special">
-                <header class="major">
-                    <h2>Recent Milestones</h2>
-                </header>
-                {% for post in site.tags["milestone"] offset: 0 limit: 10 %}
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                <p>
-                <b>{{ post.title }}</b>
-                     on {{ post.date | date: "%B %-d, %Y" }}
-                </p>
-                </a>
-                {% endfor %}
-            </section>
-            <!-- <section id="third" class="main special">
-                <header class="major">
-                    <h2>AUV Competitions</h2>
-                </header>
-                    {% for item in site.competition %}
-                    <p style="clear: both;">
-                    <span class="image {% cycle 'left', 'right' %}"><img src="{{ item.image }}" alt="" /></span>
-                    <h3> {{ item.title }} </h3>
-                    {{ item.description }}
-                    <a href="{{ item.link }}"><i>Read more...</i></a>
-                    </p>
-                    <br>
-                    {% endfor %}
-            </section> -->
-            <section id="fourth" class="main special">
-                <header class="major">
-                    <h2>Research Collaborations</h2>
-                </header>
-                    {% for item in site.research %}
-                    <p style="clear: both;">
-                    <span class="image {% cycle 'left', 'right' %}"><img src="{{ item.image }}" alt="" /></span>
-                    <h3> {{ item.title }} </h3>
-                    {{ item.description }}
-                    </p>
-                    <br>
-                    {% endfor %}
-            </section>
-        </div>
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+	<div class="notepad-index-post-tags" style="">
+		{% for tag in post.tags %}<a href="{{ site.baseurl }}/search/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+	</div>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+

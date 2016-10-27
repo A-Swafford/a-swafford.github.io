@@ -1,6 +1,7 @@
 ---
-layout: default
-title: "Python Tutorials"
-description: "Tutorials for Molecular Evolution & Phylogenetics"
-category: Tutorials
+layout: project
+title: "Project 1"
+description: "Description of Project #1"
+header-img: "img/home-bg.jpg"
+category: project1
 ---
