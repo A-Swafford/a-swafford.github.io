@@ -37,7 +37,7 @@ layout: default
 		<h4 class="post-subtitle">{{ post.subtitle }}
 		<br>
 		{% assign minutes = content | number_of_words | divided_by: site.wpm %}
-		<i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
+		{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
 		{{ minutes }} minute read
 		</h4>
 	{% endif %}
