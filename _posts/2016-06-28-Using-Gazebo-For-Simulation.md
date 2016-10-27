@@ -6,7 +6,7 @@ date: 2016-06-28 0:02:00
 author: "Shikher Verma"
 header-img: "/images/posts/pic04.jpg"
 comments: true
-tags: [ milestone, Software ]
+tags: [ milestone, Software, Tutorial ]
 ---
 *This blog post assumes that the reader has some understanding of Robot Operating System.*
 
