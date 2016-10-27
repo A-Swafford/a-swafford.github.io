@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 group :jekyll_plugins do
   gem "github-pages"
-  gem "jekyll-paginate"
+  gem 'octopress-paginate'
   gem "jekyll-feed"
   gem "html-proofer"
   gem "rake"
