@@ -12,7 +12,7 @@ description: Ipsum dolor sit amet nullam
             <section id="content" class="main">
                 
                 {% for post in paginator.posts %}
-                {% if post.tags contains "tutorial" %}
+                {% if post.tags contains "Tutorial" %}
                 <div class="post-preview">
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <h2 class="post-title">
