@@ -15,6 +15,7 @@ logo: /a-swafford.github.io/img/logos/Project-Pages-New-Logo-Inverted.png
 # Tertiary Parameters
 github_username:  a-swafford
 project_repository: a-swafford.github.io
+wpm: 150
 disqus_shortname: project-pages
 g-analytics: UA-75881392-1
 altmetric: true

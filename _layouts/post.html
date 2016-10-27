@@ -34,7 +34,12 @@ layout: default
 	<a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title"> {{ post.title }}</h2></a>
 	
 	{% if post.subtitle %}
-		<h4 class="post-subtitle">{{ post.subtitle }}</h4>
+		<h4 class="post-subtitle">{{ post.subtitle }}
+		<br>
+		{% assign minutes = content | number_of_words | divided_by: site.wpm %}
+		<i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
+		{{ minutes }} minute read
+		</h4>
 	{% endif %}
 	
 	<p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.8em">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
