@@ -1,0 +1,139 @@
+---
+layout:     post
+title:      A1 - Modules
+author:     Andrew Swafford
+tags: 		python tutorial
+subtitle:  	Installing & Importing Modules
+category:  pythonTuts
+---
+# Installing & Importing Modules
+
+## Installing Modules
+
+Installing modules is something you will inevitably need to do as you begin to seriously use python.  Similar to 'packages' in R, python modules are (some more than others) curated sets of functions & classes that are available for public use.  Installation on Unix systems is typically more simple - but there are almost always workarounds when using Windows.  For the coming tutorials, you will be using several packages that are not native (included in the default install) to python.  Here is a list of the modules we will be using:  
+
+* Numpy  
+* ETE3
+* Six
+* BioPython
+* Uniprot
+* Virtual environment
+
+To use the modules, they must first be installed.
+
+**UNIX/MACINTOSH**  
+1. Open your terminal and make sure the 'pip' or 'easy_install' commands are accessible to you. You can check by typing:
+'pip -h' 
+Or
+'easy_install -h'
+You should see a list of very helpful commands pop up. Python 3 relies on easy_install while python 2 relies on pip, though both can be manually installed on either version.  You should only need one accessible to you..though I have found pip works more reliably on Windows python 2.7.
+
+2. Take a minute to read the help files you just printed to your screen.
+
+3. Try using either pip or easy_install to install Numpy using : 
+'pip install numpy'
+'easy_install numpy'
+
+4. Follow the readout as it is printed and make sure it ends with 'Successfully installed numpy-' followed by the version number that was installed. Simple!
+
+5. Now install the rest of the modules using the following names: 'biopython', 'uniprot', 'ete3', 'virtualenv', and 'six'.
+
+
+**WINDOWS**  
+1.  Windows users have several more steps and must install some supporting software to properly use all modules in python.  Here is a list of basic things you should have installed on a windows machine you plan to use for python work:  
+
+* *MinGW* - How to install, be sure to install the 'basic' and 'gcc' packages.  
+* *Mktemp* - be sure to add the bin directory to your PATH.  
+* *Notepad++*  
+* *Cython*  
+* *Git*  
+
+2. In order to use pip and easy_install from any directory, you must add the Scripts directory to your PATH. If you do not know how to add to your PATH, consider google!  The directory you need to add is the Scripts folder in your Python home directory that you defined on install.  
+Assuming you installed Python 2.7 directly on your C:\ drive, you would want to add two new entries to your PATH:
+  * C:\Python27
+  * C:\Python27\Scripts
+
+3. Verify you have access to either pip or easy_install using the 'git' command line interface you installed earlier.  Either startup git from your start menu, or right click on any directory and select 'git bash here' to automatically open git and navigate to the open directory.  
+Once git is open, try entering `pip -h` **or** `easy_install -h`  
+Each should give you a printout of helpful options.  Make sure you have at least one working.
+
+4. Take a minute to read the help files you just printed to your screen.
+
+5. Attempt to install numpy using either pip or easy_install.  If one does not work, try the other. You can always use pip to install easy_install or vice-versa.  Enter either:
+`pip install numpy` **or** `easy_install numpy`
+
+6. Follow the readout as it is printed and make sure it ends with *'Successfully installed numpy-'* followed by the version number that was installed. Simple!
+
+7. Now install the rest of the modules using the following names: `'biopython', 'uniprot', 'ete3', 'virtualenv', `and` 'six'`, certain modules may not be accessible via pip or easy_install, this website serves as a repository to manually install: http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+8. To properly use ETE3, you will need to manually install the lxml module.  Download the lxml module that matches your python version and operating system (32 or 64 bit). Then, using the Git command line interface, navigate to the directory where you saved the `.WHL` (wheel) file and install using:
+`pip install <insert module filename>`
+Where insert module filename is the name of the `.WHL` file you downloaded.
+  
+### Troubleshooting  
+Let me know if you have a problem so I can add it here!  
+Andrew@Swafford.com
+
+
+
+
+
+## Importing Modules
+  
+Importing modules is the next step after installing.  While basic usage is easy, there are several conventions that you may choose to follow.  Each module is, in effect, a library filled with functions and classes that serve as our analogies to 'books'.  By typing 'import numpy' you are essentially setting up a reference to all books in the library, but are not directly attaching them to your python session, this leads to messy and un-pythonic code, and is typically discouraged.  The 'crude' but effective method to bypass this is to simply ask to 'check out' the entire library by executing 'from numpy import *'.  This command imports every function and class in the numpy library and, while effective, is viewed as creating unnecessary CPU and memory usage.  
+  
+A good import will specifically choose the classes and functions that will be used and nothing more.  For instance, in the module ETE3, there are a number of very weighty classes & functions.  To avoid importing these each time you call the script, and because we will normally only be interested in importing and reading trees, we read the documentation to find out what classes/functions we need.  In this case, we will need the 'Treenode' or 'Tree' class.  To selectively import only this class and its functions into memory, we use the command:  
+
+```python
+from ete3 import Tree
+```
+
+If we are interested in importing multiple classes/functions from a particular module, we can list them separated by commas:  
+
+```python
+from ete3 import Tree, PhyloTree
+```
+
+If you are writing a script (and there is no reason you should not be), all imports are called before any actual code.  The only things that come before import commands would be short comments or a shebang directing the operating system to use the python environment.
+
+### Troubleshooting  
+Let me know if you have a problem so I can add it here!  
+Andrew@Swafford.com
+
+ 
+
+## Managing modules
+
+Managing modules is fairly easy, and if you are using modules frequently, you should be sure to check for updates often.  Modules may be updated using pip or easy_install using the following:
+`pip install numpy --upgrade`
+Or
+`easy_install --upgrade numpy`
+
+To see the modules you have already installed, invoke python and use the `help()` command followed by `modules`.  Please be advised that this does not work on all machines. If you know the module you are trying to find, it is often quicker to simply attempt an `import` on the module you are looking for.
+
+#### Virtual environments - a sandbox for development
+Not all modules are compatible, and though it is rare as long as you follow proper importing protocols, some functions of a module may be overwritten by another.  There may also be times when you are required to use old versions of a module to replicate particular analyses, get particular pipelines to work, or test a newer, beta version of a module already installed.  To do all of this while leaving your core python build and modules alone, you can use a virtual environment.
+You have already installed the virtual environment package earlier in this tutorial, to begin using it you must first name a virtual environment.  Start your **command line interface** (*Git Bash* or *Terminal*) and without invoking python, type:  
+**UNIX:** `virtualenv sandbox`  
+**WINDOWS:** `virtualenv.exe sandbox`  
+These create the virtual environment named '*sandbox*' in the directory you are currently in.  Once created, you will need to activate this virtual environment by executing:  
+**UNIX:** `source sandbox/bin/activate`  
+**WINDOWS:** `source sandbox/Scripts/activate`  
+In response to this command, you will get a printout of `(sandbox)` after a minute or so indicating that the virtual environment is now active.
+
+With the virtual environment now active, you effectively have a clean install of your python version.  To make sure, invoke python and attempt to import the module `ete3`, which we know was correctly installed on our core version.  Doing so should throw an error saying `No module named ete3 installed`, success!  When you are done with the environment, you can return to your core python installation by simply typing `deactivate`.  If you would like to use the same environment again, navigate to the directory containing your virtual environment's folder in your command line interface and use:  
+**UNIX:** `source sandbox/bin/activate`  
+**WINDOWS:** `source sandbox/Scripts/activate`  
+
+### Troubleshooting
+Let me know if you have a problem so I can add it here!  
+Andrew@Swafford.com
+
+ 
+## IDLE
+
+Until now, many of your scripts and work has been ephemeral, perhaps copy-pasting from a text document or working directly through the command line interface. Python comes with a native IDE called IDLE. While not fancy, beginning by using IDLE will let you get comfortable with installation and basic scripting before attempting the more complex IDEs that require more involved setups.  You can launch IDLE from your start menu or create an empty text file and rename its extension to '.py', allowing you to right-click and select 'Edit with IDLE' from the context menu.  When using IDLE, you may press 'f5' to run your script in whatever python environment you have active (virtual or core).  I strongly encourage you to script and save all work in .py form so you may go back and re-use or re-run code easily, especially when loops and logic get involved.
+
+
+## Concluding remarks
+You are now set up to begin creating more involved and intricate scripts to help you with your work! By learning the general processes behind installing, importing, and managing modules you are ready to learn at your own pace separate from these tutorials.  Section A (Basic tutorials pt.2) focuses on general usage and common scripting practices that you may find useful even if you are not interested in phylogenetics and molecular evolution.  For those of you that are interested, you are now prepared to sail smoothly through the remaining sections without worry of missing software.  Although we will not begin examining tree structures and molecular databases until Section B, these tutorials are designed to be used in order, and novice users are highly encouraged to complete Section A before continuing on.  The goal of these tutorials is to bring you to a point where you are comfortable creating functions from scratch as well as finding and implementing modules that will help you create useful tools.

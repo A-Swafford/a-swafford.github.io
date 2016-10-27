@@ -401,7 +401,7 @@ body {
 }
 
 div.notepad-index-post-tags {
-    font-size: 16px;
+    font-size: 0.8em;
     float: none;
     color: black;
     padding-top: 1.25rem;
@@ -437,7 +437,16 @@ div.float-right{
 	margin-right:2%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+div.float-right-post{
+    width:150px;
+    position:fixed;
+    right:0;
+	bottom:0;
+	/* margin-top:50px; */
+	margin-right:2%;
+	margin-bottom:2%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 div.float-left{
     width:300px;
     position:fixed;
@@ -446,7 +455,16 @@ div.float-left{
 	margin-left:2%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+div.float-left-bottom{
+    width:200px;
+    position:fixed;
+    left:0;
+	bottom:0;
+	/* margin-top:50px; */
+	margin-left:2%;
+	margin-bottom:2%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 @media (max-width: 1500px) {
 	div.float-left{
 	display: none !important;
