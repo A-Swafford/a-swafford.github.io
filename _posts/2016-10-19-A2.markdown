@@ -56,6 +56,7 @@ Write a script that uses the random number generator in each module (random, num
 </details>
 <details> 
   <summary>Answers</summary>  
+   {% gist A-Swafford/5aa9815ce4e2e0cdaaec4d1d74fb91eb %}
   </details>
 <br/>
 <br/>  
