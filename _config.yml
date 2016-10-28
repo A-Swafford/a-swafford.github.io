@@ -1,0 +1,29 @@
+# Site settings
+title: Terminal Node
+email: iitkauv@gmail.com
+copyright_name: TerminalNode
+github_username: A-Swafford
+baseurl: "/a-swafford.github.io"
+
+collections:
+  vehicles :
+  teams:
+  tutorials :
+  subteam :
+  competition :
+  research :
+  people:
+
+# used to estimate reading time
+markdown: kramdown
+highlighter: rouge
+wpm: 150
+port: 4444
+permalink: /blog/:title
+
+# jekyll-paginate
+paginate: 5
+paginate_path: blog/page:num
+
+# gem dependencies
+gems: [jekyll-paginate, jekyll-feed, jekyll-gist, jemoji]
