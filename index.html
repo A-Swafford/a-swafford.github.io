@@ -85,7 +85,7 @@ layout: splash
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta" style="margin-bottom:5px">Posted on {{ post.date | date: "%B %-d, %Y" }},&nbsp;{% assign minutes = post.content | number_of_words | divided_by: site.wpm %}
+    <p class="post-meta" style="margin-bottom:5px">Posted {{ post.date | date: "%B %-d, %Y" }},&nbsp;{% assign minutes = post.content | number_of_words | divided_by: site.wpm %}
 		<i class="fa fa-clock-o"></i>{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
 		{{ minutes }} minute read.</p>
 	<div class="notepad-index-post-tags" style="">
