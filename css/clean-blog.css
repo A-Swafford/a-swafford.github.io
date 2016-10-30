@@ -782,8 +782,7 @@ hr.sep {
 header.major p,
 .typedheader {
     font-size: 1.25em;
-    font-weight: bold;
-	font: inherit
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     letter-spacing: -0.025em;
 }
 p.red {
@@ -1277,13 +1276,6 @@ section.special header.major h2:after,
 article.special header.major h2:after {
     margin-left: auto;
     margin-right: auto;
-}
-
-header.major p,
-.typedheader {
-    font-size: 1.25em;
-    font-weight: bold;
-    letter-spacing: -0.025em;
 }
 
 header.major.special {
