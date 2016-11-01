@@ -119,29 +119,29 @@ Learning loops, logic, and shortcuts for handling data is essential to moving fo
 
 Here are several exercises that are aimed at developing your skills using loops, logic, and populating variables.  Try to use the shortcuts above to make your code as short as possible without sacrificing readability.  Each exercise is accompanied by a “PAR” score for line number, try to make par or below!
 
-#### Ex. 1 - PAR 4
+#### Ex. 1 - PAR 4  
 Create a list containing the numbers 0-20, where each number is added individually.
 <details> 
   <summary>Answer</summary>  
   Not so fast!...actually there's just nothing here yet!  
 </details><br/>  
 
-#### Ex. 2 - PAR 4
+#### Ex. 2 - PAR 4  
 Create a list containing 5 sublists.  Each sublist must contain the numbers 0-5.
 <details> 
   <summary>Answer</summary>  
   Not so fast!...actually there's just nothing here yet!  
 </details><br/>  
 
-#### Ex. 3 - PAR 5
-Print the number of unique values in the following list to the screen.
+#### Ex. 3 - PAR 5  
+Print the number of unique values in the following list to the screen.  
 [48, 46, 32, 33, 37, 23, 45,  3, 43,  1, 25, 18, 11, 19, 35, 12, 46, 13, 34, 23, 29,  7, 19, 26, 27, 44, 29, 10, 20, 31, 23, 32, 41, 39, 9, 34, 45, 25, 29,  1, 30, 38, 49, 31, 28, 32, 14, 20, 14, 37, 40, 27, 48, 20, 30, 39, 31, 49, 25, 25, 36, 13, 33, 35,  2,  7, 11,  5, 31, 12, 44, 37, 47, 11, 41, 48,  4,  1, 40, 39, 46, 39,  5, 48, 36, 31, 40,  5, 25, 16,  2, 45, 19,  2, 18, 11, 10, 38, 17, 31]
 <details> 
   <summary>Answer</summary>  
   Not so fast!...actually there's just nothing here yet!  
 </details><br/>  
 
-#### Ex. 4 - PAR 6
+#### Ex. 4 - PAR 6  
 Create a dictionary with the integers 1-12 as keys, and the same number stored as a string for each key’s value.  Then print each key, value pair that has a value that is evenly divisible by 3.
 <details> 
   <summary>Answer</summary>  
