@@ -1,10 +1,12 @@
 ---
-layout:     post
-title:      A1 - Modules
-author:     Andrew Swafford
-tags: 		python tutorial
-subtitle:  	Installing & Importing Modules
-category:  pythonTuts
+layout: post
+title: "Installing Modules"
+subtitle: "Unlocking the Power of Python"
+date: 2016-10-11 0:02:00
+author: "Andrew Swafford"
+comments: true
+category: Tutorials
+tags: [Python,Tutorial]
 ---
 # Installing & Importing Modules
 

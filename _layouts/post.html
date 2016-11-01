@@ -83,9 +83,11 @@ layout: default
 		
 		<a href="{{ post.url | prepend: site.baseurl }}"><h4 class="post-title"> {{ post.title }}</h4></a>
 		
+<!--
 		{% if post.subtitle %}
-			<h5 class="post-subtitle">{{ post.subtitle }}</h5>
+			<h5 class="post-subtitle"{{ post.subtitle }}</h5>
 		{% endif %}
+-->
 		
 		<!-- <p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.6em">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p> -->
 		<h5>
@@ -95,20 +97,21 @@ layout: default
 		</h5>
 		
 		{% assign relevantpostcount = 1 %}
+		{% assign rpostone = post.title %}
 		
 		{% continue %}	
 		
 		{% endif %}	
 		
-		{% if page.tags contains tag and relevantpostcount == 1 %} 
+		{% if page.tags contains tag and relevantpostcount == 1 and post.title != rpostone %} 
 		
 		<hr class="style-one">
 		
 		<a href="{{ post.url | prepend: site.baseurl }}"><h4 class="post-title"> {{ post.title }}</h4></a>
-		
+		<!--
 		{% if post.subtitle %}
 			<h5 class="post-subtitle">{{ post.subtitle }}</h5>
-		{% endif %}
+		{% endif %} -->
 		<h5>
 		{% assign minutes = post.content | number_of_words | divided_by: site.wpm %}
 		<i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
@@ -128,7 +131,6 @@ layout: default
 
 		</div>
 		</div>
-
 <!-- Post Content -->
 {% include imagezoom.html %}
 

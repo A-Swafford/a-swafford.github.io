@@ -1,0 +1,152 @@
+---
+layout: post
+title: "Coding Shorthand"
+subtitle: "Trimming the Fat Off Your Code."
+date: 2016-10-25 0:02:00
+author: "Andrew Swafford"
+comments: true
+category: Tutorials
+tags: [Python,Tutorial]
+---  
+
+## Populating Lists, Sets, & Dicts
+
+### Lists
+Lists are possibly every beginning programmers first peek at the potential of what can be done with programming.  Often times, using more complicated forms of storage are completely unnecessary from a functional standpoint.  Lists themselves are fairly easy to use, but there are some shortcuts that will help reduce the amount of code you need to write.  Here are some helpful functions we’ll be using today.
+
+`.append()`
+The list.append(list/var) function is used on a list or iterable to add an item to it.  The item is added in its entirety to the existing lists. This is useful for creating lists of lists and preserving list structure while concatenating.
+
+`.extend()`
+The list.extend(list/var) function is used on a list or iterable to add another list to the existing one.  Contrary to append(), the extend() function will unpack whatever variable is being added and insert each unpacked value in order at the end of the existing list.
+
+### Sets
+
+#### Using operators
+Lists have a companion variable type called ‘sets’.  Sets are essentially an unordered collection of values that can have operations performed on them.  Thus, unlike lists, we can use arithmetic symbols to find unique or intersecting values of two or more set without using if-then statements or loops!  The easiest way to create a set is to convert a list into one with the set(list) function.  However, before you do this, there are a few caveats to using sets:  
+
+ * The contents of the converted list will lose their order.
+ * All duplicate values within the list will be removed.  
+ 
+These are not necessarily bad.  In fact, these behaviors can be used to quickly remove duplicate entries by doing list(set(list)) from a list if the original order is not needed.  This converts an existing list into a set, removing duplicates, then back into an iterable list!
+
+### Dicts
+
+`.setdefault(key,value)`
+The dict.setdefault(key,value) function is extremely useful for populating dictionaries inside loops & logic.  This function scans an existing dictionary for a key, and if not found, adds the key, value pair to the existing dictionary.  If the key is found, no changes are made to the existing value.  This is very useful when paired with .append() or .extend() to manipulate lists as values.
+
+`.keys(), .values(), .items()`
+Those of you familiar with dictionary structure will be well acquainted with these functions.  For those who do not know, items in a dictionary are stored as key, value pairs.  Thus, using any of these functions on an existing dictionary returns either a list of the keys, the values, or a list of tuples representing the key, value pairs stored as items. Using .items() is recommended when you want to use logic/loops to retrieve data from a particular key, or all keys that match a particular value.
+
+## Logic & Loops
+The staple of most bioinformatics programming comes into play with logic and loops.  Iterating through large lists and repositories should be avoided to shorten runtimes, but is unavoidable at some scales.  Here, we focus on coding shortcuts to make code more condensed and readable – structuring your variables and functions to avoid long loops is something that should be done when planning your scripts/programs.
+‘In’ and ‘Not In’
+Many beginners will want to search a list for a particular variable and code out the for loop & logic behind matching each value in the list to their desired variable.  This can be done automatically with the ‘in’ and ‘not in’ logic comparisons. Here is an example:
+{% highlight python %}
+if x in list:
+	print(“Found x”)
+if not x in list:
+	print(“Did not find x”)
+{% endhighlight %}
+This handles all the looping & logic for you! How pythonic!
+
+### Inline loops
+
+Inline loops are a bit tricky at first, but ultimately will severely cut down on the length and complexity of your coding.  Inline loops are used to generate lists of items from looping through some other iterable.  The lists they create can be defined in-place, and they are hugely helpful to master.  Here is an example of an inline loop, for clarity I have defined the variables you will see as well:
+{% highlight python %}
+xList = [1,2,3]
+xType = [str(value) for value in xList]
+{% endhighlight %}
+The inline loop in this code, “[str(value) for value in xList]”, unpacks the iterable ‘xList’ and begins looping through, assigning the current value to the variable ‘value’.  Each of these values is then converted into a string (they were previously integers), and the new list ‘xType’ is extended with the new stringified value. Neat!
+
+### Inline ‘if’s
+Many if statements you write will be very short and only have a single line of code in their payload.  If this is the case, you can write these statements inline to help keep your code neat and readable for later users (including yourself).  Here is an example of an inline ‘if’:  
+`If 2 in xList: print(“found 2”)`  
+This statement is divided into two parts separated by the colon, the if statement and the payload.  For extensive if statements, this division is typically made very obvious by adding a newline and indentation. For small if statements like these, you can cut down on whitespace and script length by placing it in one line.  Additionally, if you want to sneak a second line of code into the payload, you can separate the two lines by using a semicolon and still everything on one line.  This practice is frowned upon as it can easily lead to unreadable code.
+
+
+### Merging Inline ‘if’s and Loops
+Merging the two previous sections gives your code much more power for much less text.  When merging the two, you should be clear to keep your variables informative or readability will suffer.  Here is an example of merging the inline loops and ifs:
+{% highlight python %}
+xList = [1,2,3]
+xType = [str(value) for value in xList if value == 2]
+{% endhighlight %}
+The merged code, “[str(value) for value in xList if value == 2]”, now loops through the iterable ‘xList’, and only coverts the variable ‘value’ into a string when ‘value’ is 2.  These single line loop/logic combinations are a huge space saver, but you must take care to keep your code readable or provide extensive comments.
+
+### While loops
+While loops are immensely helpful for modular coding, but must be handled carefully because of their ability to create an infinite loop.  The stopping conditions for while loops should be very carefully considered, especially when dealing with data from other users (who knows what they’ll use as inputs).  In essence, while loops are ‘for’ loops that continue until a condition is met.  Here is an example where the while loop will continue to add 1 to an integer until that integer equals 20:
+{% highlight python %}
+x = 0
+while x < 20:
+	print(x)
+	x += 1
+{% endhighlight %}
+Included in this while loop is a bonus shortcut, +=.  The += function attempts to carry out an addition operation followed by reassigning the output of that operation to the existing variable.  The loop itself is defined as while loop by ‘while’ and the stop criteria is determined by ‘x < 20’.  Any form of comparison used in ‘if/else’ logic is applicable as a stopping criteria for while loops.
+
+### Maneuvering Loop Structure (Flow Control)
+Unlike the movie Primer, maneuvering through and escaping loops in python is a breeze! There are three indispensable statements for controlling loop execution: continue, break, pass.
+The continue statement starts the next loop immediately and skips any remaining code in the loop.  
+{% highlight python %}
+for value in xList:
+	if value == 2:
+		continue
+		print(value)
+{% endhighlight %}
+This code would end up printing ‘1 3’, skipping 2 because having x = 2 executes the continue payload in the logic structure.  The continue statement immediately starts the loop for the next value in xList, while skipping the ‘print’ function.
+
+The break statement stops execution of the current loop and continues executing code outside the loop. 
+{% highlight python %}
+x = 0
+while x < 20:
+	x += 1
+	if x = 10:
+		break 
+{% endhighlight %}
+This while loop will only allow the variable ‘x’ to reach a value of 10 before executing the ‘break’ statement, causing the loop to take a ‘step back’ into the normal flow of code.  It is important to note that ‘break’ does not exit all loops, just the one currently being executed.  This is useful if you ever have a loop within a loop (although typically inefficient, it does happen) and want to break out of the inner loop but continue executing the outer loop.
+
+There is an additional flow control statement: pass. This statement does nothing and can be used when a statement is required but you want no code to execute at that time. For example:
+{% highlight python %}
+if 2 in xList:
+	pass
+else:
+	print(“No 2!”)
+{% endhighlight %}  
+
+## Concluding Remarks
+Learning loops, logic, and shortcuts for handling data is essential to moving forward as an effective programmer.  However, you should take care to not lose sight of pythonic coding basics.  Keeping code neat and readable is important in python – and misusing these shortcuts by creating a nesting-doll of functions or non-informative variable names will cause your coding practices (and you) to suffer down the road.  When properly used in conjunction with pythonic coding practices, you will see a marked improvement in the efficacy and readability of your coding projects.
+
+### Exercises
+
+Here are several exercises that are aimed at developing your skills using loops, logic, and populating variables.  Try to use the shortcuts above to make your code as short as possible without sacrificing readability.  Each exercise is accompanied by a “PAR” score for line number, try to make par or below!
+
+#### Ex. 1 - PAR 4
+Create a list containing the numbers 0-20, where each number is added individually.
+<details> 
+  <summary>Answer</summary>  
+  Not so fast!...actually there's just nothing here yet!  
+</details><br/>
+#### Ex. 2 - PAR 4
+Create a list containing 5 sublists.  Each sublist must contain the numbers 0-5.
+<details> 
+  <summary>Answer</summary>  
+  Not so fast!...actually there's just nothing here yet!  
+</details><br/>
+#### Ex. 3 - PAR 5
+Print the number of unique values in the following list to the screen.
+[48, 46, 32, 33, 37, 23, 45,  3, 43,  1, 25, 18, 11, 19, 35, 12, 46, 13, 34, 23, 29,  7, 19, 26, 27, 44, 29, 10, 20, 31, 23, 32, 41, 39, 9, 34, 45, 25, 29,  1, 30, 38, 49, 31, 28, 32, 14, 20, 14, 37, 40, 27, 48, 20, 30, 39, 31, 49, 25, 25, 36, 13, 33, 35,  2,  7, 11,  5, 31, 12, 44, 37, 47, 11, 41, 48,  4,  1, 40, 39, 46, 39,  5, 48, 36, 31, 40,  5, 25, 16,  2, 45, 19,  2, 18, 11, 10, 38, 17, 31]
+<details> 
+  <summary>Answer</summary>  
+  Not so fast!...actually there's just nothing here yet!  
+</details><br/>
+#### Ex. 4 - PAR 6
+Create a dictionary with the integers 1-12 as keys, and the same number stored as a string for each key’s value.  Then print each key, value pair that has a value that is evenly divisible by 3.
+<details> 
+  <summary>Answer</summary>  
+  Not so fast!...actually there's just nothing here yet!  
+</details><br/>
+#### Ex, 5 - PAR 7  
+Using the dictionary from Ex. 4, create a script that prints a key/value pair to the screen every 1 second, prints nothing instead of printing the value ‘3’, and has a 10% chance to stop counting at all after each time it prints.
+<details> 
+  <summary>Answer</summary>  
+  Not so fast!...actually there's just nothing here yet!  
+</details>
