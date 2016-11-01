@@ -64,7 +64,7 @@ layout: default
 {% endfor %}
 
 <!-- Also Interesting -->
-
+<!--
 {% assign relevantpostcount = 0 %}
 {% for post in site.posts %}
 	
@@ -88,8 +88,10 @@ layout: default
 			<h5 class="post-subtitle"{{ post.subtitle }}</h5>
 		{% endif %}
 -->
+<!--
 		
 		<!-- <p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.6em">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p> -->
+<!--
 		<h5>
 		{% assign minutes = post.content | number_of_words | divided_by: site.wpm %}
 		<i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
@@ -112,6 +114,7 @@ layout: default
 		{% if post.subtitle %}
 			<h5 class="post-subtitle">{{ post.subtitle }}</h5>
 		{% endif %} -->
+<!--
 		<h5>
 		{% assign minutes = post.content | number_of_words | divided_by: site.wpm %}
 		<i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
@@ -131,6 +134,7 @@ layout: default
 
 		</div>
 		</div>
+-->
 <!-- Post Content -->
 {% include imagezoom.html %}
 
