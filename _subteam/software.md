@@ -1,6 +1,6 @@
 ---
-title: Coding
+title: Software
 icon: fa-code
 iconstyle: style1
-description: We believe in the philosophy of open source, thats why all our source is licensed under BSD license. We use ROS to connect various systems and OpenCV for Image Processing. Our setup is polyglot in nature, meaning we can use C/C++, python or java to write our code in.
+description: I am interested in creating bioinformatic software that increases accuracy and reproducibility of analyses. I firmly believe in open-source and collaborative software.  All code created for projects I participate on is freely available under the GNU GPLv3 license, which serves to further promote and build a open-source codebase.
 ---

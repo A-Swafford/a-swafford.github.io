@@ -1,6 +1,6 @@
 ---
-title: Mentorship
-icon: fa-pencil
+title: Outreach
+icon: fa-users
 iconstyle: style3
-description: The mechanical sub-system is responsible for designing, prototyping and manufacturing of complete vehicle consisting of frame, waterproof hull, torpedoes etc.
+description: I participate in a number of outreach efforts which center around education and self-improvement.  Through coding tutorials and a student-focused teaching style, it is my hope to promote interest and diversity in evolutionary research and STEM fields.
 ---
