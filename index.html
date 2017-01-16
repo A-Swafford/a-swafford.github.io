@@ -12,7 +12,7 @@ layout: splash
 					<header class="major">
 						<h2>A Quick Introduction</h2>
 					</header>
-					<p>My research projects approach the broad question of complex trait evolution at the level of genes, gene families, and the traits themselves.  <br />A specific aim of both my research and outreach projects is improving objectivity in data handling and technological literacy of future scientists through code.</p>
+					<p>My research projects approach the broad question of complex trait evolution at the level of genes, gene families, and the traits themselves.  <br />Both my research and outreach projects aim at improving objectivity in data handling and technological literacy of future scientists through code.</p>
 				</div>
 				<span class="image"><img src="images/vehicles/varun.jpg" alt="varun" /></span>
 			</div>
@@ -25,8 +25,8 @@ layout: splash
 			<ul class="features">
 				{% for item in site.subteam %}
 				<li>
-					<span class="icon UB {{ item.iconstyle }} {{ item.icon }}"></span>
-					<h3>{{ item.title }}</h3>
+					<a href = "{{ item.linkpage | prepend: site.baseurl }}"><span class="icon UB {{ item.iconstyle }} {{ item.icon }}"></span>
+					<h3>{{ item.title }}</h3></a>
 					<p>{{ item.description }}</p>
 				</li>
 				{% endfor %}
