@@ -12,7 +12,7 @@ tags: [Illumina,Read,Transcript,Tutorial]
 ## Programs & Tools needed
 * [Bowtie2 v2.3.0](https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.0/)
 * [Samtools v1.3.1](http://www.htslib.org/download/)
-* [IGV viewer v2.3](http://software.broadinstitute.org/software/igv/)
+* [Integrated Genomics Viewer (IGV) v2.3](http://software.broadinstitute.org/software/igv/)
 
 ## How to map reads back to the transcripts
 ### Prepare input files
@@ -30,7 +30,7 @@ Once you have your inputs prepared, use the following command to start mapping:
 ```
 bowtie2 --local --no-unal -x focal_transcripts -q -1 read1.fq -2 read2.fq > focal_transcripts.bam
 ```
-Depending on how large your reads and transcripts are, this may take some time.  Once finished, we need to prepare the output for visualization in IGV viewer with a few further commands.  First, we need to sort the reads we've mapped:
+Depending on how large your reads and transcripts are, this may take some time.  Once finished, we need to prepare the output for visualization in IGV with a few further commands.  First, we need to sort the reads we've mapped:
 ```
 samtools sort focal_transcripts.bam -o sorted_focal_t.sorted
 ```
@@ -40,15 +40,15 @@ samtools index sorted_focal_t.sorted
 ```
 This will output an index file named `sorted_focal_t.sorted.bai`.
 
-It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory as your original file of focal transcripts. This is needed for IGV viewer to correctly read the index files we're making.
+It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory as your original file of focal transcripts. This is needed for IGV to correctly read the index files we're making.
 
-Lastly, we will need to prepare the original transcripts for visualization in IGV viewer through it's own menu.  Open IGV viewer (the first initialization may take a while depending on your processor and internet connection) and navigate to the "Create .genome File" option under the Genomes menu: `Genomes > "Create .genome File"`.  A prompt will appear with several required fields, here is how you can fill them in:  
+Lastly, we will need to prepare the original transcripts for visualization in Integrated Genomics Viewer (IGV) through it's own menu.  Open IGV (the first initialization may take a while depending on your processor and internet connection) and navigate to the "Create .genome File" option under the Genomes menu: `Genomes > "Create .genome File"`.  A prompt will appear with several required fields, here is how you can fill them in:  
 * `Unique Identifier`: Any unique string of alphanumeric characters. (e.g. 12345678ABCDE)  
 * `Descriptive Name`: A human readable, short, name of your 'genome'. (e.g. Cyclopsin_focal_transcripts)
 * `FASTA File`: Either type in the path to your original transcript file, `focal_t.fasta`, or use thier UI to navigate to and select it.
 
 You can ignore the rest of the input fields.  Once done providing the required information, save your genome somewhere accessable (the default location works well) and it will automatically open.  If you have more than one focal transcripts, nothing will appear until you choose a locus (i.e. transcript) to examine.  You can do this at the top of the IGV user interface, in the second drop down menu.  The first menu is the current genome, and selecting a locus other than 'all' will create a track with that locus' sequence.
 
-Lastly, load in your reads by navigating to `File > Load from File` and selecting your sorted bam file, e.g. `sorted_focal_t.sorted` (*not the index file*!).  With any luck, you should see the reads appear in the IGV viewer window mapped onto your set of focal transcripts.
+Lastly, load in your reads by navigating to `File > Load from File` and selecting your sorted bam file, e.g. `sorted_focal_t.sorted` (*not the index file*!).  With any luck, you should see the reads appear in the IGV window mapped onto your set of focal transcripts.
 
 If this does not work, ensure all your bowtie2 outputs are in the same folder, and that you have actually selected the sorted bam file, and not an index file.
