@@ -41,7 +41,7 @@ samtools index sorted_focal_t.sorted
 ```
 This will output an index file named `sorted_focal_t.sorted.bai`.
 
-:warning:It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory as your original file of focal transcripts. This is needed for IGV to correctly read the index files we're making.:warning:
+:warning:It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory. This is needed for IGV to correctly read the index files we're making.:warning:
 
 Lastly, we will need to prepare the original transcripts for visualization in Integrated Genomics Viewer (IGV) through it's own menu.  Open IGV (the first initialization may take a while depending on your processor and internet connection) and navigate to the "Create .genome File" option under the Genomes menu: `Genomes > "Create .genome File"`.  A prompt will appear with several required fields, here is how you can fill them in:  
 * `Unique Identifier`: Any unique string of alphanumeric characters. (e.g. 12345678ABCDE)  
