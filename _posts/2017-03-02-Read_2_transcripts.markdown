@@ -16,7 +16,7 @@ tags: [Illumina,Read,Transcript,Tutorial]
 
 ## How to map reads back to the transcripts
 ### Prepare input files
-Firstly, you will need to organize several input files: The bowtie2 index of your focal transcripts, and the read files from which those transcripts were assembled.  Your focal transcipts should be unaligned in fasta format and placed in a clean directory for easy access.  For the purposes of this tutorial, we'll call this fasta file of our focal transcripts `focal_t.fasta`.  Open a command line program and navigate to the directory where `focal_t.fasta` is located and excecute the following command:
+Firstly, you will need to organize several input files: The bowtie2 index of your focal transcripts, and the read files from which those transcripts were assembled.  Your focal transcripts should be unaligned in fasta format and placed in a clean directory for easy access.  For the purposes of this tutorial, we'll call this fasta file of our focal transcripts `focal_t.fasta`.  Open a command line program and navigate to the directory where `focal_t.fasta` is located and execute the following command:
 ```
 bowtie2-build focal_t.fasta focal_transcripts
 ```
@@ -34,7 +34,7 @@ Depending on how large your reads and transcripts are, this may take some time. 
 ```
 samtools sort focal_transcripts.bam -o sorted_focal_t.sorted
 ```
-Next, we create an index of these reads, giving IGV viwer positional data about where the reads map on our focal transcripts:
+Next, we create an index of these reads, giving IGV positional data about where the reads map on our focal transcripts:
 ```
 samtools index sorted_focal_t.sorted
 ```
@@ -47,7 +47,7 @@ Lastly, we will need to prepare the original transcripts for visualization in In
 * `Descriptive Name`: A human readable, short, name of your 'genome'. (e.g. Cyclopsin_focal_transcripts)
 * `FASTA File`: Either type in the path to your original transcript file, `focal_t.fasta`, or use thier UI to navigate to and select it.
 
-You can ignore the rest of the input fields.  Once done providing the required information, save your genome somewhere accessable (the default location works well) and it will automatically open.  If you have more than one focal transcripts, nothing will appear until you choose a locus (i.e. transcript) to examine.  You can do this at the top of the IGV user interface, in the second drop down menu.  The first menu is the current genome, and selecting a locus other than 'all' will create a track with that locus' sequence.
+You can ignore the rest of the input fields.  Once done providing the required information, save your genome somewhere accessible (the default location works well) and it will automatically open.  If you have more than one focal transcripts, nothing will appear until you choose a locus (i.e. transcript) to examine.  You can do this at the top of the IGV user interface, in the second drop down menu.  The first menu is the current genome, and selecting a locus other than 'all' will create a track with that locus' sequence.
 
 Lastly, load in your reads by navigating to `File > Load from File` and selecting your sorted bam file, e.g. `sorted_focal_t.sorted` (*not the index file*!).  With any luck, you should see the reads appear in the IGV window mapped onto your set of focal transcripts.
 
