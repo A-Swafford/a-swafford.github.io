@@ -16,11 +16,12 @@ tags: [Illumina,Read,Transcript,Tutorial]
 
 ## How to map reads back to the transcripts
 ### Prepare input files
-Firstly, you will need to organize several input files: The bowtie2 index of your focal transcripts, and the read files from which those transcripts were assembled.  Your focal transcripts should be unaligned in fasta format and placed in a clean directory for easy access.  For the purposes of this tutorial, we'll call this fasta file of our focal transcripts `focal_t.fasta`.  Open a command line program and navigate to the directory where `focal_t.fasta` is located and execute the following command:
+Firstly, you will need to organize several input files: (1) The bowtie2 index of your focal transcripts, and (2) the read files from which those transcripts were assembled.  
+Your focal transcripts should be unaligned in fasta format and placed in a clean directory for easy access.  For the purposes of this tutorial, we'll call this fasta file of our focal transcripts `focal_t.fasta`.  Open a command line editor, navigate to the directory where `focal_t.fasta` is located and execute the following command:
 ```
 bowtie2-build focal_t.fasta focal_transcripts
 ```
-Here, `focal_transcripts` can be replaced with whatever you would like, but it will be the prefix needed further down the line.  Double check that the command has worked and built the bowtie2 index files (.bt2).
+Here, `focal_transcripts` can be replaced with whatever you would like, just be sure to replace instances of 'focal_t.fasta' in this tutorial with whatever name you chose.  Double check that the command has worked and built the bowtie2 index files (.bt2) in your working directory.
 
 Next, ensure you either have your readfiles in the same directory as your bowtie2 index files, or you know the exact path to your readfiles.  In this tutorial, I am using paired end, Illumina reads in fastq format with my forward reads in a file named `read1.fq` and reverse reads in a file named `read2.fq`.  If your reads are in **fasta** format, replace the `-q` option with a `-a` option. 
 
@@ -40,7 +41,7 @@ samtools index sorted_focal_t.sorted
 ```
 This will output an index file named `sorted_focal_t.sorted.bai`.
 
-It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory as your original file of focal transcripts. This is needed for IGV to correctly read the index files we're making.
+:warning:It is important to note that *ALL* of these bowtie2 outputs must stay in the same directory as your original file of focal transcripts. This is needed for IGV to correctly read the index files we're making.:warning:
 
 Lastly, we will need to prepare the original transcripts for visualization in Integrated Genomics Viewer (IGV) through it's own menu.  Open IGV (the first initialization may take a while depending on your processor and internet connection) and navigate to the "Create .genome File" option under the Genomes menu: `Genomes > "Create .genome File"`.  A prompt will appear with several required fields, here is how you can fill them in:  
 * `Unique Identifier`: Any unique string of alphanumeric characters. (e.g. 12345678ABCDE)  
