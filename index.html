@@ -25,7 +25,11 @@ layout: splash
 			<ul class="features">
 				{% for item in site.subteam %}
 				<li>
-					<a href = "{{ item.linkpage | prepend: site.baseurl }}"><span class="icon UB {{ item.iconstyle }} {{ item.icon }}"></span>
+					{% if item.title = "Research" %}
+						<a href = "{{ item.linkpage }}"><span class="icon UB {{ item.iconstyle }} {{ item.icon }}"></span>
+					{% else %}
+						<a href = "{{ item.linkpage | prepend: site.baseurl }}"><span class="icon UB {{ item.iconstyle }} {{ item.icon }}"></span>
+					{% endif %}
 					<h3>{{ item.title }}</h3></a>
 					<p>{{ item.description }}</p>
 				</li>
