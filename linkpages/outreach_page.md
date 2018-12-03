@@ -5,6 +5,10 @@ display: "False"
 description: "Making Science Accessible"
 header-img: "img/home-bg.jpg"
 ---
+# <a href = "http://www.alwaysopensource.org"> The Always Open Source Initiative </a>
+ I founded and contribute to the Always Open Source Initiative. A.O.S. takes community suggestions and turns them into fully realized, open source projects using a team of volunteer experts. I believe everybody benefits when projects can be freely used, modified, and improved.    
+
+***
 
 # <a href = "https://shoalsrib.wordpress.com/">Research in Biology Blog</a>    
 A blog detailing the teaching process and progress of undergraduates as they learn to design, execute, and analyze their own research projects.  Showcasing the students' own blogs as a way to teach scientific communication at multiple levels.
