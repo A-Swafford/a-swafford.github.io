@@ -14,6 +14,7 @@ header-img: "img/home-bg.jpg"
 A blog detailing the teaching process and progress of undergraduates as they learn to design, execute, and analyze their own research projects.  Showcasing the students' own blogs as a way to teach scientific communication at multiple levels.
 
  - <a href = "https://shoalsrib.wordpress.com/rib-2017-projects/">RiB 2017 Undergraduate Projects & Blogs</a>  
+ - <a href = https://shoalsrib.wordpress.com/2018-projects/">RiB 2018 Undergraduate Projects & Blogs</a> 
 
 ***  
 
