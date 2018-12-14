@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Github Links"
+title: "Beyond the Lab"
 display: "False"
 description: "Making Science Accessible"
 header-img: "img/home-bg.jpg"
